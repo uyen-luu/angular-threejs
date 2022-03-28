@@ -21,7 +21,22 @@
     "lib": [
       "es2020",
       "dom"
-    ]
+    ],
+    "paths": {
+      "jszip": [
+        "node_modules/jszip/dist/jszip.min.js"
+      ],
+      "@app/*": ["app/*"],
+      "@app/shared": ["app/shared/*.ts"],
+      "@app/theme/directives": ["app/theme/directives/index.ts"],      
+      "@app/shared/services": ["app/shared/services/index.ts"],
+      "@app/shared/models": ["app/shared/models/index.ts"],
+      "@app/shared/components": ["app/shared/components/index.ts"],
+      "@app/modules/*": ["app/modules/*.ts", "app/shared/*.module.ts", "app/theme/*.module.ts"],
+      "@environment": [
+        "environments/environment.ts"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
