@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
-import * as THREE from "three";
+import * as THREE from 'three';
 
 @Component({
   selector: 'app-cube',
@@ -11,7 +11,7 @@ export class CubeComponent implements OnInit, AfterViewInit {
   @ViewChild('canvas')
   private canvasRef!: ElementRef<any>;
 
-  //* Cube Properties
+  // * Cube Properties
 
   @Input() public rotationSpeedX: number = 0.05;
 
@@ -19,10 +19,10 @@ export class CubeComponent implements OnInit, AfterViewInit {
 
   @Input() public size: number = 200;
 
-  @Input() public texture: string = "/assets/texture.jpg";
+  @Input() public texture: string = '/assets/texture.jpg';
 
 
-  //* Stage Properties
+  // * Stage Properties
 
   @Input() public cameraZ: number = 400;
 
@@ -32,7 +32,7 @@ export class CubeComponent implements OnInit, AfterViewInit {
 
   @Input('farClipping') public farClippingPlane: number = 1000;
 
-  //? Helper Properties (Private Properties);
+  // ? Helper Properties (Private Properties);
 
   private camera!: THREE.PerspectiveCamera;
 
@@ -50,7 +50,7 @@ export class CubeComponent implements OnInit, AfterViewInit {
   private scene!: THREE.Scene;
 
   /**
-   *Animate the cube
+   * Animate the cube
    *
    * @private
    * @memberof CubeComponent
@@ -67,12 +67,12 @@ export class CubeComponent implements OnInit, AfterViewInit {
    * @memberof CubeComponent
    */
   private createScene() {
-    //* Scene
+    // * Scene
     this.scene = new THREE.Scene();
     this.scene.background = new THREE.Color(0x000000)
     this.scene.add(this.cube);
-    //*Camera
-    let aspectRatio = this.getAspectRatio();
+    // *Camera
+    const aspectRatio = this.getAspectRatio();
     this.camera = new THREE.PerspectiveCamera(
       this.fieldOfView,
       aspectRatio,
@@ -93,13 +93,13 @@ export class CubeComponent implements OnInit, AfterViewInit {
  * @memberof CubeComponent
  */
   private startRenderingLoop() {
-    //* Renderer
+    // * Renderer
     // Use canvas element in template
     this.renderer = new THREE.WebGLRenderer({ canvas: this.canvas });
     this.renderer.setPixelRatio(devicePixelRatio);
     this.renderer.setSize(this.canvas.clientWidth, this.canvas.clientHeight);
 
-    let component: CubeComponent = this;
+    const component: CubeComponent = this;
     (function render() {
       requestAnimationFrame(render);
       component.animateCube();

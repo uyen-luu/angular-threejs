@@ -1,8 +1,10 @@
 import { AutoFocusDirective } from './directives/auto-focus.directive';
-import { NgModule, Component } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LayoutComponent } from './components/layout/layout.component';
+import { SideNavToolbarComponent } from './components/side-nav-toolbar/side-nav-toolbar.component';
 //
 const BASE_MODULES = [
   CommonModule,
@@ -12,8 +14,9 @@ const BASE_MODULES = [
 ];
 
 // Components for this module only
-const COMPONENTS: Component[] = [
-
+const COMPONENTS = [
+  LayoutComponent,
+  SideNavToolbarComponent
 ];
 
 //
