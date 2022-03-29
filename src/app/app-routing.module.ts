@@ -7,6 +7,10 @@ const routes: Routes = [
     path: 'home',
     loadChildren: () => import('./modules/home/home.module').then(m => m.HomeModule)
   },
+  {
+    path: 'reactive-form',
+    loadChildren: () => import('./modules/reactive-form/reactive-form.module').then(m => m.ReactiveFormModule)
+  },
 ];
 
 @NgModule({
