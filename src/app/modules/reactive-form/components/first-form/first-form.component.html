@@ -1,1 +1,5 @@
 <p>first-form works!</p>
+<form [formGroup]="heroForm">
+  <app-text-box label="Textbox" formControlName="name"></app-text-box>
+  <app-date-picker label="Date" formControlName="date"></app-date-picker>
+</form>

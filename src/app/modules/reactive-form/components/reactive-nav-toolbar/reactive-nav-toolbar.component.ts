@@ -7,8 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ReactiveNavToolbarComponent implements OnInit {
   routes = [
-    {name: '1st Form', path: '/first-form'},
-    {name: '2nd Form', path: '/second-form'}
+    {name: '1st Form', path: '/reactive-form/first-form'},
+    {name: '2nd Form', path: '/reactive-form/second-form'}
   ];
   constructor() { }
 
