@@ -1,0 +1,5 @@
+<label for="name">{{label}}</label>
+<input type="text" name="city" list="datalist" />
+<datalist id="datalist">
+  <option *ngFor="let item of items" [value]="item"></option>
+</datalist>

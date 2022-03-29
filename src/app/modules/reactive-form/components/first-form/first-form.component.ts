@@ -11,7 +11,8 @@ import * as moment from 'moment';
 })
 export class FirstFormComponent implements OnInit, OnDestroy {
   heroForm!: FormGroup;
-  hero = { name: 'Dr.', date: new Date() };
+  hero = { name: 'Dr.', date: new Date(), dropdown: 'Two' };
+  items = ['One', 'Two', 'Three', 'Four', 'Five']
   private $subscription = new Subscription();
   constructor() { }
 
@@ -22,7 +23,8 @@ export class FirstFormComponent implements OnInit, OnDestroy {
         Validators.minLength(4),
         forbiddenNameValidator(/bob/i)
       ]),
-      date: new FormControl(moment(this.hero.date).format('yyyy-MM-DD'))
+      date: new FormControl(moment(this.hero.date).format('yyyy-MM-DD')),
+      dropdown: new FormControl('Two')
     }); // <-- add custom validator at the FormGroup level
 
     this.$subscription.add(this.heroForm.valueChanges.subscribe(data => {

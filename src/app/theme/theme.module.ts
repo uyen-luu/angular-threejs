@@ -8,6 +8,7 @@ import { SideNavToolbarComponent } from './components/side-nav-toolbar/side-nav-
 import { TextBoxComponent } from './components/reative-form/text-box/text-box.component';
 import { AutoFocusDirective, ForbiddenValidatorDirective } from './directives';
 import { DatePickerComponent } from './components/reative-form/date-picker/date-picker.component';
+import { DropdownlistComponent } from './components/reative-form/dropdownlist/dropdownlist.component';
 //
 const BASE_MODULES = [
   CommonModule,
@@ -21,7 +22,8 @@ const COMPONENTS = [
   LayoutComponent,
   SideNavToolbarComponent,
   TextBoxComponent,
-  DatePickerComponent
+  DatePickerComponent,
+  DropdownlistComponent
 ];
 
 //
@@ -39,8 +41,7 @@ const PIPES: any[] = [];
   declarations: [
     ...DIRECTIVES,
     ...PIPES,
-    ...COMPONENTS,
-    DatePickerComponent
+    ...COMPONENTS
   ],
   exports: [
     ...BASE_MODULES,

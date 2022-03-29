@@ -1,5 +1,5 @@
-<p>first-form works!</p>
 <form [formGroup]="heroForm">
   <app-text-box label="Textbox" formControlName="name"></app-text-box>
   <app-date-picker label="Date" formControlName="date"></app-date-picker>
+  <app-dropdownlist label="Dropdown" formControlName="dropdown" [items]="items"></app-dropdownlist>
 </form>

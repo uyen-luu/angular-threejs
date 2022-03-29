@@ -1,36 +1,23 @@
-import {
-  Component,
-  EventEmitter,
-  Input,
-  OnInit,
-  Output,
-  ViewChild,
-} from '@angular/core';
-import {
-  FormGroup,
-  NG_VALUE_ACCESSOR,
-  FormControl,
-  FormControlDirective,
-  ControlContainer,
-  ControlValueAccessor,
-} from '@angular/forms';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { ControlContainer, ControlValueAccessor, FormControl, FormControlDirective, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Component({
-  selector: 'app-text-box',
-  templateUrl: './text-box.component.html',
-  styleUrls: ['./text-box.component.scss'],
+  selector: 'app-dropdownlist',
+  templateUrl: './dropdownlist.component.html',
+  styleUrls: ['./dropdownlist.component.scss'],
   providers: [
     {
       provide: NG_VALUE_ACCESSOR,
-      useExisting: TextBoxComponent,
+      useExisting: DropdownlistComponent,
       multi: true,
     },
   ],
 })
-export class TextBoxComponent implements ControlValueAccessor {
+export class DropdownlistComponent implements ControlValueAccessor {
   @Input() label!: string;
   @Input() formControl!: FormControl;
   @Input() formControlName!: string;
+  @Input() items: Array<any> = [];
   //
   @ViewChild(FormControlDirective, { static: true })
   formControlDirective!: FormControlDirective;

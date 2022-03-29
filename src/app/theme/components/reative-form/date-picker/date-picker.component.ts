@@ -32,14 +32,14 @@ export class DatePickerComponent implements ControlValueAccessor {
   constructor(private controlContainer: ControlContainer) {}
 
   registerOnTouched(fn: any): void {
-    this.formControlDirective.valueAccessor?.registerOnTouched(fn);
+    this.formControlDirective?.valueAccessor?.registerOnTouched(fn);
   }
 
   registerOnChange(fn: any): void {
-    this.formControlDirective.valueAccessor?.registerOnChange(fn);
+    this.formControlDirective?.valueAccessor?.registerOnChange(fn);
   }
 
   writeValue(obj: any): void {
-    this.formControlDirective.valueAccessor?.writeValue(obj);
+    this.formControlDirective?.valueAccessor?.writeValue(obj);
   }
 }
