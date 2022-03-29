@@ -1,12 +1,14 @@
 
 import { ModuleWithProviders, NgModule, Provider } from '@angular/core';
 import { ThemeModule } from '../theme/theme.module';
+import { CubeComponent } from './components';
 
 
 const PROVIDERS: Provider[] = [
 ];
 
-const COMPONENTS: any[] = [
+const COMPONENTS = [
+  CubeComponent
 ];
 
 
