@@ -9,12 +9,15 @@ import { TextBoxComponent } from './components/reative-form/text-box/text-box.co
 import { AutoFocusDirective, ForbiddenValidatorDirective } from './directives';
 import { DatePickerComponent } from './components/reative-form/date-picker/date-picker.component';
 import { DropdownlistComponent } from './components/reative-form/dropdownlist/dropdownlist.component';
+import { TooltipModule } from'ngx-bootstrap/tooltip';
+
 //
 const BASE_MODULES = [
   CommonModule,
   RouterModule,
   FormsModule,
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  TooltipModule.forRoot()
 ];
 
 // Components for this module only
