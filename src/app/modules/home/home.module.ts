@@ -9,6 +9,7 @@ import { customerFeatureKey, reducer } from './store/reducer/customer.reducer';
 import {
   AnimationComponent, EventsComponent, StateManagementComponent, ThreeNavToolbarComponent,
 } from './components';
+import { PlyloaderComponent } from './components/plyloader/plyloader.component';
 
 //#region Components
 const COMPONENTS = [
@@ -37,6 +38,10 @@ const ROUTERS = [
         component: EventsComponent,
       },
       {
+        path: 'ply-loader',
+        component: PlyloaderComponent,
+      },
+      {
         path: 'store-examples',
         component: StateManagementComponent,
       },
@@ -46,7 +51,7 @@ const ROUTERS = [
 //#endregion
 
 @NgModule({
-  declarations: [...COMPONENTS],
+  declarations: [...COMPONENTS, PlyloaderComponent],
   imports: [
     ThemeModule,
     SharedModule.forRoot(),
