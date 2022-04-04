@@ -9,6 +9,7 @@ import { customerFeatureKey, reducer } from './store/reducer/customer.reducer';
 import {
   AnimationComponent,
   EventsComponent,
+  MultiSceneComponent,
   MultiViewPostprocessingComponent,
   PlyloaderComponent,
   StateManagementComponent,
@@ -25,6 +26,7 @@ const COMPONENTS = [
   StateManagementComponent,
   PlyloaderComponent,
   MultiViewPostprocessingComponent,
+  MultiSceneComponent
 ];
 //#endregion
 
@@ -54,6 +56,10 @@ const ROUTERS = [
       {
         path: 'multi-view-postprocessing',
         component: MultiViewPostprocessingComponent
+      },
+      {
+        path: 'multi-scene',
+        component: MultiSceneComponent,
       },
       {
         path: 'store-examples',
