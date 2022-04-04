@@ -1,4 +1,4 @@
 export const MENU_NAV = [
-    {name: 'Home', path: '/home'},
+    {name: 'Three Examples', path: '/three'},
     {name: 'Reactive Form', path: '/reactive-form'}
 ];

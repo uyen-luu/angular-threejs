@@ -51,10 +51,8 @@ export class RobotComponent implements OnInit {
         action.loop = LoopOnce;
       }
     }
-
-    // this.activeAction = this.actions.Walking;
-    // tslint-disable-next-line @typescript-eslint/naming-convention
-    this.activeAction = this.actions['Walking'];
+    
+    this.activeAction = this.actions['Running'];
     this.activeAction?.play();
   }
 

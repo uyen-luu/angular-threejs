@@ -7,24 +7,17 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { customerFeatureKey, reducer } from './store/reducer/customer.reducer';
 import {
-  AnimationKeyframesComponent,
-  AnimationSkinningBlendingComponent,
-  AnimationSkinningAdditiveBlendingComponent,
-  AnimationSkinningMorphComponent,
-  AnimationMultipleComponent,
-  AnimationComponent,
+  AnimationComponent, EventsComponent, StateManagementComponent, ThreeNavToolbarComponent,
 } from './components';
 
 //#region Components
 const COMPONENTS = [
   HomeComponent,
-  AnimationKeyframesComponent,
-  AnimationSkinningBlendingComponent,
-  AnimationSkinningAdditiveBlendingComponent,
-  AnimationSkinningMorphComponent,
-  AnimationMultipleComponent,
   AnimationComponent,
-  RobotComponent
+  RobotComponent,
+  EventsComponent,
+  ThreeNavToolbarComponent,
+  StateManagementComponent
 ];
 //#endregion
 
@@ -34,26 +27,18 @@ const ROUTERS = [
     path: '',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'animation-keyframes', pathMatch: 'full' },
+      { path: '', redirectTo: 'animation', pathMatch: 'full' },      
       {
-        path: 'animation-keyframes',
-        component: AnimationKeyframesComponent,
+        path: 'animation',
+        component: AnimationComponent,
       },
       {
-        path: 'animation-skinning-blending',
-        component: AnimationSkinningBlendingComponent,
+        path: 'events',
+        component: EventsComponent,
       },
       {
-        path: 'animation-skinning-additive-blending',
-        component: AnimationSkinningAdditiveBlendingComponent,
-      },
-      {
-        path: 'second-form',
-        component: AnimationSkinningMorphComponent,
-      },
-      {
-        path: 'animation-multiple',
-        component: AnimationMultipleComponent,
+        path: 'store-examples',
+        component: StateManagementComponent,
       },
     ],
   },
