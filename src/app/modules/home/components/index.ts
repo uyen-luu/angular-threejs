@@ -7,3 +7,4 @@ export * from './plyloader/plyloader.component';
 export * from './multi-view-postprocessing/multi-view-postprocessing.component';
 export * from './multi-scene/multi-scene.component';
 export * from './post-processing/post-processing.component';
+export * from  './instanced-mesh/instanced-mesh.component';

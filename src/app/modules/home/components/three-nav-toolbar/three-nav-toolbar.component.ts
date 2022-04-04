@@ -13,6 +13,7 @@ export class ThreeNavToolbarComponent implements OnInit {
     {name: 'Multiple View Post Processing', path: '/three/multi-view-postprocessing'},
     {name: 'Multiple Scenes', path: 'multi-scene'},
     {name: 'Post Processing', path: 'post-processing'},
+    { name: 'Instanced Mesh', path: 'instanced-mesh'},
     {name: 'Store Examples', path: '/three/store-examples'}
   ];
   constructor() { }
