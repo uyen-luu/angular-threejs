@@ -97,7 +97,7 @@ export class AnimationKeyframesComponent implements OnInit {
     // this.mesh.rotation.x += 0.01;
     // this.mesh.rotation.y += 0.01;
 
-    console.log(this.i);
+    // console.log(this.i);
     const delta = this.clock.getDelta();
 
     this.mixer.update(delta);
