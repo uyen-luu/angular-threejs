@@ -4,3 +4,4 @@ export * from './events/events.component';
 export * from './three-nav-toolbar/three-nav-toolbar.component';
 export * from  './state-management/state-management.component';
 export * from './plyloader/plyloader.component';
+export * from './multi-view-postprocessing/multi-view-postprocessing.component';

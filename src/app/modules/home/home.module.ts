@@ -7,9 +7,13 @@ import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { customerFeatureKey, reducer } from './store/reducer/customer.reducer';
 import {
-  AnimationComponent, EventsComponent, StateManagementComponent, ThreeNavToolbarComponent,
+  AnimationComponent,
+  EventsComponent,
+  MultiViewPostprocessingComponent,
+  PlyloaderComponent,
+  StateManagementComponent,
+  ThreeNavToolbarComponent,
 } from './components';
-import { PlyloaderComponent } from './components/plyloader/plyloader.component';
 
 //#region Components
 const COMPONENTS = [
@@ -18,7 +22,9 @@ const COMPONENTS = [
   RobotComponent,
   EventsComponent,
   ThreeNavToolbarComponent,
-  StateManagementComponent
+  StateManagementComponent,
+  PlyloaderComponent,
+  MultiViewPostprocessingComponent,
 ];
 //#endregion
 
@@ -28,7 +34,7 @@ const ROUTERS = [
     path: '',
     component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'animation', pathMatch: 'full' },      
+      { path: '', redirectTo: 'animation', pathMatch: 'full' },
       {
         path: 'animation',
         component: AnimationComponent,
@@ -42,6 +48,14 @@ const ROUTERS = [
         component: PlyloaderComponent,
       },
       {
+        path: 'ply-loader',
+        component: PlyloaderComponent,
+      },
+      {
+        path: 'multi-view-postprocessing',
+        component: MultiViewPostprocessingComponent
+      },
+      {
         path: 'store-examples',
         component: StateManagementComponent,
       },
@@ -51,7 +65,7 @@ const ROUTERS = [
 //#endregion
 
 @NgModule({
-  declarations: [...COMPONENTS, PlyloaderComponent],
+  declarations: [...COMPONENTS],
   imports: [
     ThemeModule,
     SharedModule.forRoot(),
