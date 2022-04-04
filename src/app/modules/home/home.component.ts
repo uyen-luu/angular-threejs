@@ -1,7 +1,7 @@
 import { selectCustomers } from './store/selector/customer.selectors';
 import { CustomerModel } from './../../shared/models/customer.model';
 import { CustomerState } from './store/reducer/customer.reducer';
-import { Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { select, Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
 import * as CustomerActions from './store/action/customer.actions';
@@ -10,6 +10,7 @@ import * as CustomerActions from './store/action/customer.actions';
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HomeComponent implements OnInit {
   customers$!: Observable<CustomerModel[]>;

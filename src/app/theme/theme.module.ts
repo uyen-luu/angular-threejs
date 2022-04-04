@@ -10,6 +10,7 @@ import { AutoFocusDirective, ForbiddenValidatorDirective } from './directives';
 import { DatePickerComponent } from './components/reative-form/date-picker/date-picker.component';
 import { DropdownlistComponent } from './components/reative-form/dropdownlist/dropdownlist.component';
 import { TooltipModule } from'ngx-bootstrap/tooltip';
+import { NgxThreeModule } from 'ngx-three';
 
 //
 const BASE_MODULES = [
@@ -17,7 +18,8 @@ const BASE_MODULES = [
   RouterModule,
   FormsModule,
   ReactiveFormsModule,
-  TooltipModule.forRoot()
+  TooltipModule.forRoot(),
+  NgxThreeModule
 ];
 
 // Components for this module only

@@ -1,3 +1,4 @@
+import { RobotComponent } from './components/robot/robot.component';
 import { ThemeModule } from './../../theme/theme.module';
 import { SharedModule } from './../../shared/shared.module';
 import { NgModule } from '@angular/core';
@@ -11,6 +12,7 @@ import {
   AnimationSkinningAdditiveBlendingComponent,
   AnimationSkinningMorphComponent,
   AnimationMultipleComponent,
+  AnimationComponent,
 } from './components';
 
 //#region Components
@@ -21,6 +23,8 @@ const COMPONENTS = [
   AnimationSkinningAdditiveBlendingComponent,
   AnimationSkinningMorphComponent,
   AnimationMultipleComponent,
+  AnimationComponent,
+  RobotComponent
 ];
 //#endregion
 
