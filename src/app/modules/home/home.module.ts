@@ -5,23 +5,64 @@ import { HomeComponent } from './home.component';
 import { RouterModule } from '@angular/router';
 import { StoreModule } from '@ngrx/store';
 import { customerFeatureKey, reducer } from './store/reducer/customer.reducer';
+import {
+  AnimationKeyframesComponent,
+  AnimationSkinningBlendingComponent,
+  AnimationSkinningAdditiveBlendingComponent,
+  AnimationSkinningMorphComponent,
+  AnimationMultipleComponent,
+} from './components';
 
+//#region Components
+const COMPONENTS = [
+  HomeComponent,
+  AnimationKeyframesComponent,
+  AnimationSkinningBlendingComponent,
+  AnimationSkinningAdditiveBlendingComponent,
+  AnimationSkinningMorphComponent,
+  AnimationMultipleComponent,
+];
+//#endregion
 
+//#region Routes
+const ROUTERS = [
+  {
+    path: '',
+    component: HomeComponent,
+    children: [
+      { path: '', redirectTo: 'animation-keyframes', pathMatch: 'full' },
+      {
+        path: 'animation-keyframes',
+        component: AnimationKeyframesComponent,
+      },
+      {
+        path: 'animation-skinning-blending',
+        component: AnimationSkinningBlendingComponent,
+      },
+      {
+        path: 'animation-skinning-additive-blending',
+        component: AnimationSkinningAdditiveBlendingComponent,
+      },
+      {
+        path: 'second-form',
+        component: AnimationSkinningMorphComponent,
+      },
+      {
+        path: 'animation-multiple',
+        component: AnimationMultipleComponent,
+      },
+    ],
+  },
+];
+//#endregion
 
 @NgModule({
-  declarations: [
-    HomeComponent
-  ],
+  declarations: [...COMPONENTS],
   imports: [
     ThemeModule,
-    SharedModule,
-    RouterModule.forChild([
-      {
-        path: '',
-        component: HomeComponent
-      }
-    ]),
+    SharedModule.forRoot(),
+    RouterModule.forChild(ROUTERS),
     StoreModule.forFeature(customerFeatureKey, reducer),
-  ]
+  ],
 })
-export class HomeModule { }
+export class HomeModule {}

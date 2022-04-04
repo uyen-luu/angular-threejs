@@ -17,7 +17,7 @@ import { SecondFormComponent } from './components/second-form/second-form.compon
   ],
   imports: [
     ThemeModule,
-    SharedModule,
+    SharedModule.forRoot(),
     RouterModule.forChild([
       {
         path: '',
