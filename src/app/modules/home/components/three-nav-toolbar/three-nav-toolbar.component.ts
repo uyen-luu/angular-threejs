@@ -12,6 +12,7 @@ export class ThreeNavToolbarComponent implements OnInit {
     {name: 'PLY Loader', path: '/three/ply-loader'},
     {name: 'Multiple View Post Processing', path: '/three/multi-view-postprocessing'},
     {name: 'Multiple Scenes', path: 'multi-scene'},
+    {name: 'Post Processing', path: 'post-processing'},
     {name: 'Store Examples', path: '/three/store-examples'}
   ];
   constructor() { }

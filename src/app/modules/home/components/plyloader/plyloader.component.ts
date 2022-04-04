@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { ThPerspectiveCamera } from 'ngx-three';
 import { Vector3 } from 'three';
 import { ASSET_PATH } from '../../assets';
@@ -7,6 +7,7 @@ import { ASSET_PATH } from '../../assets';
   selector: 'app-plyloader',
   templateUrl: './plyloader.component.html',
   styleUrls: ['./plyloader.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PlyloaderComponent implements OnInit {
   public Math = Math;

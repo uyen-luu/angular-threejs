@@ -1,4 +1,4 @@
-import { Component, HostListener, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ThCanvas } from 'ngx-three';
 import { CanvasTexture, Color, PerspectiveCamera, Scene } from 'three';
 import { DotScreenShader } from 'three/examples/jsm/shaders/DotScreenShader';
@@ -7,7 +7,8 @@ import { RGBShiftShader } from 'three/examples/jsm/shaders/RGBShiftShader';
 @Component({
   selector: 'app-multi-view-postprocessing',
   templateUrl: './multi-view-postprocessing.component.html',
-  styleUrls: ['./multi-view-postprocessing.component.scss']
+  styleUrls: ['./multi-view-postprocessing.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MultiViewPostprocessingComponent implements OnInit {
 

@@ -1,11 +1,12 @@
-import { Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
+import { ChangeDetectionStrategy, Component, ElementRef, HostListener, OnInit, ViewChild } from '@angular/core';
 import { ThCanvas } from 'ngx-three';
 import { Color } from 'three';
 
 @Component({
   selector: 'app-multi-scene',
   templateUrl: './multi-scene.component.html',
-  styleUrls: ['./multi-scene.component.scss']
+  styleUrls: ['./multi-scene.component.scss'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class MultiSceneComponent implements OnInit {
 

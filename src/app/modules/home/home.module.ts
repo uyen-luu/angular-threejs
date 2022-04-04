@@ -12,6 +12,7 @@ import {
   MultiSceneComponent,
   MultiViewPostprocessingComponent,
   PlyloaderComponent,
+  PostProcessingComponent,
   StateManagementComponent,
   ThreeNavToolbarComponent,
 } from './components';
@@ -26,7 +27,8 @@ const COMPONENTS = [
   StateManagementComponent,
   PlyloaderComponent,
   MultiViewPostprocessingComponent,
-  MultiSceneComponent
+  MultiSceneComponent,
+  PostProcessingComponent
 ];
 //#endregion
 
@@ -60,6 +62,10 @@ const ROUTERS = [
       {
         path: 'multi-scene',
         component: MultiSceneComponent,
+      },
+      {
+        path: 'post-processing',
+        component: PostProcessingComponent,
       },
       {
         path: 'store-examples',
